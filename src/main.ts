@@ -1,24 +1,61 @@
 import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import {Graph} from "@antv/g6";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+
+
+// Define the source data
+const data = {
+    // The array of nodes
+    nodes: [
+        {
+            id: 'node1',
+            x: 100,
+            y: 200,
+        },
+        {
+            id: 'node2',
+            x: 300,
+            y: 200,
+        },
+    ],
+    // The array of edges
+    edges: [
+        // It is an edge link node1 to node2
+        {
+            source: 'node1',
+            target: 'node2',
+        },
+    ],
+};
+
+// Create an instance of G6.Graph
+const graph = new Graph({
+    container: 'app', // Assign the id of the graph container
+    // The width and the height of the graph
+    width: 800,
+    height: 500,
+    renderer: 'svg',
+    modes: {
+        default: ['drag-canvas', 'zoom-canvas'],
+    }
+    // modes: {
+    //     default: [
+    //         "drag-node",
+    //         // 'drag-node-with-group',
+    //         {
+    //             type: "drag-canvas",
+    //             enableOptimize: true // enable the optimize to hide the shapes beside nodes' keyShape
+    //         },
+    //         {
+    //             type: "zoom-canvas",
+    //             enableOptimize: true // enable the optimize to hide the shapes beside nodes' keyShape
+    //         }
+    //     ]
+    // }
+});
+// Load data
+graph.data(data);
+// Render the graph
+graph.render();
+
