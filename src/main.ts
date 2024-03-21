@@ -1,5 +1,7 @@
 import './style.css'
 import {Graph, type GraphData, Util} from "@antv/g6";
+// no impact on the tree-shaking
+// import {Graph, type GraphData, Util} from "@antv/g6/es";
 
 
 // copied from https://g6.antv.vision/en/examples/item/label/#labelLen1
