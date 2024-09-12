@@ -28,7 +28,7 @@ https://g6-next.antv.antgroup.com/en/manual/feature#-optimized-package-size
 > Thanks to the well-modularized design and extension registration mechanism of G6 5.0, modules that are not used will not be packaged into the final build file, reducing the package size. \
 Compared to 4.0, the UMD package size has been reduced from 1.8 MB to 0.96 MB, a reduction of nearly 50%.
 
-I see some improvements in the chunks size, but **the overall size is still larger than 1MB**.
+I see some improvements in the chunks size, but **the overall size is still larger than 1MB**. I don't see the improvements described in https://medium.com/antv/g6-5-0-beta-changlog-f86caccd2ce7 (September 2023, beta announce) mentioning a package size of 400kB. To be checked later.
 
 ### Chunks size
 
