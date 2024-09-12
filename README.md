@@ -12,11 +12,31 @@ Legend used in the evaluation:
 - ❓ feature not tested (doc not found, no time, ...)
 
 
+## G6 v5
+
+**Note**: done on `2024-19-12`
+
+See the sources of the [g6-v5](./g6-v5) poc. Built with Rsbuild 1.0.2.
+
+G6 Documentation for v5 at the time of the test: https://g6.antv.vision/en/docs/manual/introduction
+
+1st attempt: commit 1d0fcb06550d93923fad465c22daf452b08f75ac
+```
+  dist/static/css/index.b1c58531.css      0.00 kB     0.02 kB
+  dist/index.html                         0.45 kB     0.28 kB
+  dist/static/js/index.590c58db.js        2.5 kB      1.3 kB
+  dist/static/js/async/614.ca7956b1.js    21.5 kB     8.2 kB
+  dist/static/js/843.3ec3480d.js          280.9 kB    80.9 kB
+  dist/static/js/312.80a8251c.js          758.2 kB    223.3 kB
+```
+
+
+
 ## G6 v4
 
-Note: done on `2024-03-21`
+**Note**: done on `2024-03-21`
 
-See the sources of the [g6-v4](./g6-v4) poc. 
+See the sources of the [g6-v4](./g6-v4) poc. Built with Vite 5.2.2.
 
 **Test with a single dependency @antv/g6 4.8.24 released on 2023-12-12**
 
