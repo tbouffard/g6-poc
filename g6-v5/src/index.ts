@@ -1,6 +1,6 @@
 import './index.css';
 import {Graph, type GraphData} from "@antv/g6";
-// import { Renderer } from '@antv/g-svg';
+import { Renderer } from '@antv/g-svg';
 // no impact on the tree-shaking
 // import {Graph, type GraphData, Util} from "@antv/g6/es";
 
@@ -118,7 +118,7 @@ const graph= new Graph({
     // TODO from v4
     // https://g6-next.antv.antgroup.com/en/manual/feature#-multi-renderer-support
     // renderer: 'svg',
-
+    renderer: () => new Renderer(),
     // modes: {
     //     default: ['drag-canvas', 'zoom-canvas'],
     // }

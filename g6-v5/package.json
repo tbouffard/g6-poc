@@ -9,7 +9,8 @@
     "preview": "rsbuild preview"
   },
   "dependencies": {
-    "@antv/g6": "~5.0.21"
+    "@antv/g6": "~5.0.21",
+    "@antv/g-svg": "~2.0.11"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.0.1",
